@@ -570,19 +570,19 @@ if(fine && hero){
   window.addEventListener('resize', measure);
   if(window.ResizeObserver){ new ResizeObserver(measure).observe(track); }
 
-  const SPEED=0.5;           // px por frame del autoavance
-  const DRAG_THRESHOLD=6;    // px para considerar que hubo arrastre
+  const isTouchDevice = ()=> window.matchMedia('(hover:none)').matches;
+
+  const SPEED=0.5;
+  const DRAG_THRESHOLD=6;
   let pressing=false, dragging=false, moved=0;
   let startX=0, startScroll=0, pointerId=null;
-  // acumulador float propio: scrollLeft redondea incrementos sub-pixel (0.5px)
-  // y dejaba el carrusel congelado. Llevamos la posición real aparte.
   let pos = carousel.scrollLeft;
 
   const norm=v=>{ if(half<=0) return v; v%=half; if(v<0) v+=half; return v; };
 
   function tick(){
-    // se frena solo si el cursor está sobre una tarjeta o si se mantiene apretado
-    if(!pressing && !carousel.querySelector('.proj:hover')){
+    // en touch el browser maneja el scroll nativo; solo auto-avanzamos en desktop
+    if(!isTouchDevice() && !pressing && !carousel.querySelector('.proj:hover')){
       pos = norm(pos + SPEED);
       carousel.scrollLeft = pos;
     }
@@ -590,8 +590,9 @@ if(fine && hero){
   }
   requestAnimationFrame(tick);
 
-  // mantener apretado frena el carrusel; arrastrar lo desplaza
+  // drag con pointer events (solo desktop — en touch el browser maneja pan-x nativo)
   carousel.addEventListener('pointerdown', e=>{
+    if(isTouchDevice()) return;
     if(e.button!==undefined && e.button!==0) return;
     pressing=true; dragging=false; moved=0;
     pos=carousel.scrollLeft; startX=e.clientX; startScroll=pos;
@@ -599,10 +600,9 @@ if(fine && hero){
     document.body.classList.add('cur-grab');
   });
   carousel.addEventListener('pointermove', e=>{
-    if(!pressing) return;
+    if(isTouchDevice() || !pressing) return;
     const dx=e.clientX-startX;
     if(Math.abs(dx)>moved) moved=Math.abs(dx);
-    // solo se considera arrastre tras superar el umbral (un clic no captura el puntero)
     if(!dragging && moved>DRAG_THRESHOLD){
       dragging=true;
       try{ carousel.setPointerCapture(pointerId); }catch(_){}
@@ -611,7 +611,6 @@ if(fine && hero){
     if(!dragging) return;
     pos = norm(startScroll - dx);
     carousel.scrollLeft = pos;
-    // re-anclar para permitir arrastres largos sin tope tras el wrap
     if(pos<=1 || pos>=half-1){ startX=e.clientX; startScroll=pos; }
   });
   function endDrag(){
@@ -626,7 +625,6 @@ if(fine && hero){
   }
   carousel.addEventListener('pointerup', endDrag);
   carousel.addEventListener('pointercancel', endDrag);
-  // por si se suelta fuera del carrusel (evita que quede congelado)
   window.addEventListener('pointerup', endDrag);
   window.addEventListener('pointercancel', endDrag);
 
