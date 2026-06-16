@@ -1070,9 +1070,9 @@ section.block{
   .hero-photo{ position:relative; height:62vh; }
   .hero-photo::after{ background:linear-gradient(0deg, rgba(234,230,223,.5), transparent 30%); }
   .hero[data-portada] .hero-title{ position:static; top:auto; bottom:auto; left:auto; right:auto; max-width:none; padding:84px 22px 4px; transform:none; }
-  .hero[data-portada] .hero-name{ position:static; top:auto; left:auto; margin:16px auto 4px; max-width:none; width:fit-content; }
+  .hero[data-portada] .hero-name{ position:static; top:auto; left:auto; margin:16px auto 4px; max-width:none; width:fit-content; font-size:16px !important; }
   .hero[data-portada] .hero-name::after{ display:none; }
-  .hero[data-portada] .hero-title h1{ font-size:clamp(58px,18vw,96px); }
+  .hero[data-portada] .hero-title h1{ font-size:clamp(36px,10vw,58px); }
   .hero[data-portada] .hero-folders{
     position:static !important; display:grid !important; grid-template-columns:repeat(3,1fr); gap:12px;
     padding:18px 22px 30px; transform:none !important; background:transparent !important;
@@ -1084,6 +1084,7 @@ section.block{
   .hero[data-portada] .folder-tile{ width:100% !important; max-width:96px; height:72px !important; margin:0 auto !important; }
   .hero[data-portada] .folder-img{ width:78px !important; height:auto !important; margin:0 auto !important; }
 
+  .signature{ font-size:28px !important; }
   .sw-band{ gap:26px 22px; }
   .edu-list{ grid-template-columns:1fr; }
   .exp-int{ grid-template-columns:1fr; }
