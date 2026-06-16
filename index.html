@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es" data-theme>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>María Constanza Masi Pino — Portafolio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Noto+Music&family=Space+Mono:wght@400;700&family=Style+Script&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/idk4pbx.css">
+<link rel="stylesheet" href="https://use.typekit.net/uuo2jyc.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-cursor-on="1">
+
+<!-- ===== CUSTOM CURSOR (mano pixelada) ===== -->
+<div class="cursor-clef" id="cur-clef"><img class="chand" src="assets/cursor-hand.png" alt=""><img class="cfist" src="assets/cursor-fist.png" alt=""><span class="clabel" id="cur-label"></span></div>
+
+<!-- ===== LANG TOGGLE (flotante, sin barra) ===== -->
+<div class="lang-toggle" id="lang">
+  <button class="active" data-lang="es">ES</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<!-- ===== PORTADA ===== -->
+<section class="hero" id="top" data-portada="centrada">
+  <!-- carrusel de empresas que colaboraron (fucsia, en movimiento) -->
+  <div class="hero-marquee" aria-label="Empresas que colaboraron conmigo">
+    <div class="hm-mask">
+      <div class="hm-track" id="hero-logo-track">
+        <span class="hm-item" role="img" aria-label="Vocable" style="--logo:url('assets/logos/vocable.png');--ar:4.87;--h:18px"></span>
+        <span class="hm-item" role="img" aria-label="Outrank" style="--logo:url('assets/logos/outrank.png');--ar:4.07;--h:20px"></span>
+        <span class="hm-item" role="img" aria-label="Revid.ai" style="--logo:url('assets/logos/revid.png');--ar:4.31;--h:19px"></span>
+        <span class="hm-item" role="img" aria-label="AIApply" style="--logo:url('assets/logos/aiapply.png');--ar:3.33;--h:22px"></span>
+        <span class="hm-item" role="img" aria-label="AnswerThis" style="--logo:url('assets/logos/answerthis.png');--ar:9.35;--h:13px"></span>
+        <span class="hm-item" role="img" aria-label="Odin" style="--logo:url('assets/logos/odin.png');--ar:3.14;--h:20px"></span>
+        <span class="hm-item" role="img" aria-label="Block Media" style="--logo:url('assets/logos/blockmedia-color.png');--ar:2.72;--h:22px"></span>
+        <span class="hm-item" role="img" aria-label="RealEstateContent.ai" style="--logo:url('assets/logos/realstateai.png');--ar:5.94;--h:15px"></span>
+        <span class="hm-item" role="img" aria-label="Mr Pipeline" style="--logo:url('assets/logos/mrpipeline-color.png');--ar:2.77;--h:22px"></span>
+        <span class="hm-item" role="img" aria-label="EvolveRV" style="--logo:url('assets/logos/evolverv.png');--ar:4.96;--h:17px"></span>
+        <span class="hm-item" role="img" aria-label="Proin" style="--logo:url('assets/logos/proin.png');--ar:3.53;--h:20px"></span>
+        <span class="hm-item" role="img" aria-label="Blue Casas" style="--logo:url('assets/logos/bluecasas.png');--ar:0.92;--h:30px"></span>
+        <span class="hm-item" role="img" aria-label="María del Luc" style="--logo:url('assets/logos/mdl.png');--ar:1.9;--h:24px"></span>
+        <span class="hm-item" role="img" aria-label="Academia" style="--logo:url('assets/logos/academia.png');--ar:3.51;--h:21px"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-photo"></div>
+
+  <div class="hero-title">
+    <h1 data-i18n="hero-portfolio" style="text-align: center">Portafolio</h1>
+    <div class="hero-name" data-i18n="hero-name" style="font-size: 17px; color: rgb(240, 99, 154); padding: 0px; margin: 1px 0px 0px; text-align: right">María Constanza Masi Pino</div>
+  </div>
+
+  <div class="hero-folders">
+    <a class="folder f-about" href="#about" data-cursor="ABRIR">
+      <img class="folder-img" src="assets/folders/rosada.png" alt="">
+      <span class="folder-label">about_me</span>
+    </a>
+    <a class="folder f-ficha" href="#ficha" data-cursor="ABRIR">
+      <img class="folder-img" src="assets/folders/naranja.png" alt="">
+      <span class="folder-label">ficha_tecnica</span>
+    </a>
+    <a class="folder f-projects" href="#projects" data-cursor="ABRIR">
+      <img class="folder-img" src="assets/folders/verde.png" alt="">
+      <span class="folder-label">proyectos</span>
+    </a>
+    <a class="folder f-testim" href="#testim" data-cursor="ABRIR">
+      <img class="folder-img" src="assets/folders/verde-claro.png" alt="">
+      <span class="folder-label">testimonios</span>
+    </a>
+  </div>
+
+  <a class="hero-notif" href="#about" data-cursor="VER">
+    <span class="notif-ico"><svg viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm7 1.6L18.4 9H14a1 1 0 0 1-1-1V3.6ZM8 12h8v1.6H8V12Zm0 3.2h8v1.6H8v-1.6Z"></path></svg></span>
+    <span class="notif-tx">
+      <strong data-i18n="notif-t">Portafolio ´26</strong>
+      <span data-i18n="notif-s">Tocá acá para ver mi trabajo</span>
+    </span>
+  </a>
+</section>
+
+<main class="sections">
+
+  <!-- ===== 01 · SOBRE MÍ ===== -->
+  <section class="block reveal" id="about">
+    <div class="about-sparkles" aria-hidden="true">
+      <span class="spk flower" style="--s:54px;--c:var(--hot-pink);top:3%;left:9%;--d:.2s"></span>
+      <span class="spk flower" style="--s:38px;--c:var(--pink-soft);top:22%;left:80%;--d:1.3s"></span>
+      <span class="spk flower" style="--s:30px;--c:var(--orange);top:58%;left:90%;--d:.7s"></span>
+      <span class="spk flower" style="--s:46px;--c:var(--hot-pink);top:80%;left:4%;--d:1.9s"></span>
+      <span class="spk flower" style="--s:34px;--c:var(--lime);top:50%;left:50%;--d:1.1s"></span>
+      <span class="spk flower" style="--s:26px;--c:var(--pink-soft);top:90%;left:46%;--d:.4s"></span>
+      <span class="spk gem" style="--s:30px;--c:var(--hot-pink);top:6%;left:3%;--d:0s"></span>
+      <span class="spk" style="--s:22px;--c:var(--orange);top:12%;left:46%;--d:1.1s"></span>
+      <span class="spk gem" style="--s:18px;--c:var(--lime);top:4%;left:72%;--d:.6s"></span>
+      <span class="spk" style="--s:34px;--c:var(--hot-pink);top:30%;left:88%;--d:1.8s"></span>
+      <span class="spk gem" style="--s:24px;--c:var(--orange);top:52%;left:2%;--d:.9s"></span>
+      <span class="spk" style="--s:16px;--c:var(--olive);top:64%;left:38%;--d:2.2s"></span>
+      <span class="spk gem" style="--s:28px;--c:var(--lime);top:74%;left:66%;--d:.3s"></span>
+      <span class="spk" style="--s:20px;--c:var(--hot-pink);top:86%;left:14%;--d:1.4s"></span>
+      <span class="spk gem" style="--s:22px;--c:var(--orange);top:92%;left:54%;--d:2s"></span>
+      <span class="spk" style="--s:26px;--c:var(--lime);top:44%;left:60%;--d:.7s"></span>
+      <span class="spk gem" style="--s:16px;--c:var(--hot-pink);top:20%;left:24%;--d:1.6s"></span>
+      <span class="spk" style="--s:30px;--c:var(--orange);top:70%;left:92%;--d:.5s"></span>
+    </div>
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="eb-1">Sobre mí</div>
+    </div>
+
+    <div class="about">
+      <div class="about-text">
+        <p class="lead" data-i18n="s1-p1"><strong>¡Hola! Soy María Constanza Masi Pino</strong>, diseñadora gráfica y digital en formación, basada en Mendoza, Argentina. Mi trabajo vive en la intersección entre la creatividad visual, el contenido digital y el diseño estratégico, y lo impulsa una combinación de experiencia real en agencias, proyectos propios y una búsqueda constante de crecimiento.</p>
+        <p data-i18n="s1-p2">Trabajé de forma remota para agencias de marketing digital como <strong>La Ofitcina</strong> y <strong>Viralclip.io</strong>, y de manera independiente para clientes de rubros muy distintos: real estate, deportistas, coaches y más. En las agencias aprendí a trabajar con ritmo y a cumplir tiempos sin resignar calidad; el trabajo independiente me enseñó a escuchar al cliente y a traducir su visión en piezas concretas. Juntos me dieron algo que ningún aula reemplaza: la capacidad de adaptarme, resolver y crear bajo presión real. Además, incorporo herramientas de inteligencia artificial en mi proceso creativo para optimizar tiempos y expandir posibilidades.</p>
+        <p data-i18n="s1-p3">Actualmente curso la <strong>Licenciatura en Diseño Gráfico y Digital</strong> en la Universidad Champagnat, sumando base teórica a lo que ya construí en la práctica durante tres años. Cuando no estoy diseñando, exploro tendencias visuales, viajo para descubrir nuevas expresiones de creatividad, canto canciones viejas en escenarios y veo musicales que amo.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="portrait">
+          <img class="portrait-photo" src="assets/foto-perfil-nueva.png" alt="María Constanza Masi Pino">
+        </div>
+        <div class="signature" style="font-size: 6px">María Constanza<br>Masi Pino</div>
+        <a class="contact-me-btn" href="#contact" data-cursor="EMAIL" data-i18n="contact-btn">Contactame</a>
+        <div class="about-actions">
+          <a class="icon-btn" href="https://www.instagram.com/mconstanzamasi/" target="_blank" rel="noopener" aria-label="Instagram" data-cursor="IG">
+            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.92 5.92 0 0 0-2.13 1.39A5.92 5.92 0 0 0 .62 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.32.79.74 1.46 1.39 2.13a5.92 5.92 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.92 5.92 0 0 0 2.13-1.39 5.92 5.92 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.92 5.92 0 0 0-1.39-2.13A5.92 5.92 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+          </a>
+          <a class="icon-btn" href="https://www.linkedin.com/in/mconstanzamasi" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor="IN">
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 .01-4.13 2.06 2.06 0 0 1-.01 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a class="icon-btn" href="CV-MariaConstanza-MasiPino.pdf" download data-cursor="CV" aria-label="Descargar CV">
+            <svg viewBox="0 0 24 24"><path d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V7h3.5L13 3.5ZM12 10a.9.9 0 0 0-.9.9v4.18l-1.4-1.4a.9.9 0 1 0-1.27 1.27l2.94 2.93a.9.9 0 0 0 1.27 0l2.93-2.93a.9.9 0 1 0-1.27-1.27l-1.4 1.4V10.9A.9.9 0 0 0 12 10Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 02 · FICHA TÉCNICA ===== -->
+  <section class="block reveal" id="ficha">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="eb-2">Ficha técnica</div>
+    </div>
+
+    <div class="ficha-stack">
+
+      <!-- educación -->
+      <div class="fblock">
+        <div class="eyh"><h3 data-i18n="fh-edu">Educación</h3></div>
+        <div class="ebox">
+          <div class="edu-list">
+            <div class="edu" style="--bg:var(--lime)">
+              <span class="yr">2020 · BACHILLERATO</span>
+              <h4 data-i18n="s2-edu-1-t">Economía, Adm. &amp; RRHH</h4>
+              <span class="place" data-i18n="s2-edu-1-p">Colegio Las Candelas</span>
+            </div>
+            <div class="edu" style="--bg:var(--pink-soft)">
+              <span class="yr">2025–2028 · EN CURSO</span>
+              <h4 data-i18n="s2-edu-2-t">Lic. Diseño Gráfico &amp; Digital</h4>
+              <span class="place" data-i18n="s2-edu-2-p">Universidad Champagnat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- experiencia (izq) + software / intereses / playlist (der) -->
+      <div class="exp-int">
+
+        <!-- experiencia · sin números -->
+        <div class="fblock fblock-exp">
+          <div class="eyh"><h3 data-i18n="fh-exp">Experiencia</h3></div>
+          <div class="ebox dark">
+            <div class="exp">
+              <div class="exp-row">
+                <div class="exp-meta"><div class="yr">2023 — ACTUALIDAD</div><div class="loc" data-i18n="exp-loc-remote">en remoto · worldwide</div></div>
+                <div class="exp-c"><h4>Freelancer</h4><p data-i18n="exp-1-p">Atiendo clientes de Argentina, EE.UU., España, Australia, Sudáfrica y otros países. Diseño contenido para redes, branding e identidad visual y documentos adaptados al branding de cada cliente. Con más de 45 proyectos completados, aprendí a escuchar lo que cada cliente necesita y a traducirlo en diseños que no solo se ven bien, sino que comunican y conectan.</p></div>
+              </div>
+              <div class="exp-row">
+                <div class="exp-meta"><div class="yr">2024 — 2025</div><div class="loc" data-i18n="exp-loc-andorra">Andorra · remoto</div></div>
+                <div class="exp-c"><h4>La Ofitcina</h4><p data-i18n="exp-2-p">Agencia de marketing digital especializada en creadores del mundo fitness. Fue donde realmente me formé como diseñadora en un entorno profesional exigente. Gestioné hasta 10 proyectos simultáneos, planteé identidades visuales desde cero y diseñé contenido para redes con planificación mensual. Aprendí a trabajar con deadlines reales, a organizarme con Notion y Slack, y a entender que en un equipo de 20 personas el trabajo de cada uno impacta en el del resto.</p></div>
+              </div>
+              <div class="exp-row">
+                <div class="exp-meta"><div class="yr">2024 — 2025</div><div class="loc" data-i18n="exp-loc-andorra2">Andorra · remoto</div></div>
+                <div class="exp-c"><h4>Viralclip.io</h4><p data-i18n="exp-3-p">Agencia especializada en ads de Andorra. Me ubicó en un rol pionero: fui la primera diseñadora gráfica del equipo. Impulsé alineamientos estéticos para el diseño de anuncios basados en la identidad de marca de empresas desarrolladoras de IA, logrando viralizar ads y aumentar las suscripciones de sus clientes.</p></div>
+              </div>
+              <div class="exp-row">
+                <div class="exp-meta"><div class="yr">2026 — ACTUALIDAD</div><div class="loc" data-i18n="exp-loc-miami">EE.UU. · remoto</div></div>
+                <div class="exp-c"><h4>Miami Dade Bar</h4><p data-i18n="exp-4-p">Trabajo codo a codo con el departamento de marketing diseñando piezas promocionales para sus actividades, folletos y recursos gráficos de apoyo para cada ocasión.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- software · stickers reales -->
+        <div class="fblock fblock-sw">
+          <div class="eyh"><h3 data-i18n="fh-sw">Software</h3></div>
+          <div class="sw-band">
+            <div class="sw" style="--rot:-6deg"><img src="assets/software/Illustrator.png" alt="Illustrator"><span class="nm">Illustrator</span></div>
+            <div class="sw" style="--rot:6deg"><img src="assets/software/photoshop.png" alt="Photoshop"><span class="nm">Photoshop</span></div>
+            <div class="sw" style="--rot:-4deg"><img src="assets/software/InDesign.png" alt="InDesign"><span class="nm">InDesign</span></div>
+            <div class="sw" style="--rot:4deg"><img src="assets/software/Premiere.png" alt="Premiere"><span class="nm">Premiere</span></div>
+            <div class="sw" style="--rot:8deg"><img src="assets/software/blender.png" alt="Blender"><span class="nm">Blender</span></div>
+            <div class="sw" style="--rot:-6deg"><img src="assets/software/figma.png" alt="Figma"><span class="nm">Figma</span></div>
+            <div class="sw" style="--rot:6deg"><img src="assets/software/notion-v2.png" alt="Notion" style="object-fit: contain"><span class="nm">Notion</span></div>
+            <div class="sw" style="--rot:-5deg"><img src="assets/software/slack.png" alt="Slack"><span class="nm">Slack</span></div>
+            <div class="sw" style="--rot:4deg"><img src="assets/software/drive.png" alt="Google Drive"><span class="nm">Google Drive</span></div>
+            <div class="sw" style="--rot:-6deg"><img src="assets/software/canva.png" alt="Canva"><span class="nm">Canva</span></div>
+            <div class="sw" style="--rot:5deg"><img src="assets/software/claude.png" alt="Claude"><span class="nm">Claude</span></div>
+            <div class="sw" style="--rot:-4deg"><img src="assets/software/chatgpt.png" alt="ChatGPT"><span class="nm">ChatGPT</span></div>
+            <div class="sw" style="--rot:6deg"><img src="assets/software/gemini.png" alt="Gemini"><span class="nm">Gemini</span></div>
+            <div class="sw add" data-cursor="+">
+              <div class="ico"></div><span class="gl">+</span>
+              <div class="sw-pop" data-i18n="s2-sw-pop">✦ Siempre estoy aprendiendo nuevas herramientas. Tengo gran facilidad para adaptarme a cualquier software :)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- intereses -->
+        <div class="fblock fblock-int">
+          <div class="eyh"><h3 data-i18n="fh-int">Intereses</h3></div>
+          <div class="ebox">
+            <div class="interests">
+              <span class="chip" style="--bg:var(--hot-pink);--r:-3deg;color:#fff" data-i18n="int-1">Packaging</span>
+              <span class="chip cut" style="--bg:var(--lime);--r:2deg" data-i18n="int-2">Diseño interactivo</span>
+              <span class="chip" style="--bg:var(--orange);--r:-2deg;color:#fff" data-i18n="int-3">Musicales</span>
+              <span class="chip cut" style="--bg:var(--pink-soft);--r:3deg" data-i18n="int-4">Música</span>
+              <span class="chip" style="--bg:var(--olive);--r:-4deg;color:#fff" data-i18n="int-5">Cultura pop US</span>
+              <span class="chip cut" style="--bg:var(--lime);--r:2deg" data-i18n="int-6">Manualidades</span>
+              <span class="chip" style="--bg:var(--hot-pink);--r:-2deg;color:#fff" data-i18n="int-7">Libros</span>
+              <span class="chip cut" style="--bg:var(--orange);--r:4deg;color:#fff" data-i18n="int-8">Guitarra &amp; canto</span>
+              <span class="chip" style="--bg:var(--pink-soft);--r:-3deg" data-i18n="int-9">Danza</span>
+              <span class="chip cut" style="--bg:var(--lime);--r:3deg" data-i18n="int-10">Diseño editorial</span>
+              <span class="chip" style="--bg:var(--hot-pink);--r:-2deg;color:#fff" data-i18n="int-11">Branding</span>
+              <span class="chip cut" style="--bg:var(--olive);--r:4deg;color:#fff" data-i18n="int-12">Inglés B2</span>
+              <span class="chip" style="--bg:var(--hot-pink);--r:-3deg;color:#fff" data-i18n="int-13">Diseño UX/UI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- lectura del mes + playlist -->
+        <div class="fblock fblock-play">
+          <div class="media-row">
+          <div class="playlist">
+            <div class="pl-head">
+              <div class="note" data-i18n="playlist-note">si mi proceso creativo fuese una playlist, sonaría así…</div>
+              <div class="pt" data-i18n="playlist-title">Creative Flow</div>
+            </div>
+            <iframe class="pl-embed" src="https://open.spotify.com/embed/playlist/2Ndw0wAbLtQBwx40MLb7Wl?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Creative Flow playlist en Spotify"></iframe>
+          </div>
+          <div class="book">
+            <div class="book-tx">
+              <div class="note" data-i18n="book-note">Mi lectura del mes</div>
+              <div class="bt" data-i18n="book-title">How to Use Graphic Design</div>
+              <div class="ba" data-i18n="book-author">por Michael Bierut</div>
+            </div>
+            <div class="book-cover"><img src="assets/libro-portada.jpg" alt="How to Use Graphic Design — Michael Bierut"></div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 03 · PROYECTOS ===== -->
+  <section class="block reveal" id="projects">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="eb-3">Proyectos</div>
+    </div>
+
+    <div class="proj-carousel">
+      <div class="proj-track" id="proj-track">
+      <article class="proj" data-project="viralclip" data-cursor="VER">
+        <div class="proj-thumb proj-thumb-img" style="--thumb:#0a0a0a url('assets/projects/viralclip/portada.jpg') center/cover"></div>
+        <div class="proj-body">
+          <h4>Viralclip.io</h4>
+          <div class="meta" data-i18n="proj-1-meta">2024–2025 · ANDORRA · AGENCIA DE ADS</div>
+          <p data-i18n="proj-1-desc">Primera diseñadora gráfica del equipo. Impulsé alineamientos estéticos y viralicé ads para empresas de IA.</p>
+          <div class="tags"><span class="tag pink">Branding</span><span class="tag">Social Media</span><span class="tag lime">Ads</span></div>
+        </div>
+      </article>
+      <article class="proj" data-project="silvia" data-cursor="VER">
+        <div class="proj-thumb proj-thumb-img" style="--thumb:#0a0a0a url('assets/projects/silvia/portada.jpg') center/cover"></div>
+        <div class="proj-body">
+          <h4>Soy Silvia Ruiz</h4>
+          <div class="meta" data-i18n="proj-silvia-meta">2025 · ANDORRA · MARKETING</div>
+          <p data-i18n="proj-silvia-desc">Portadas, posts y carruseles para Silvia, CEO de La Ofitcina. Un feed limpio pero llamativo para captar clientes — y mi primer approach al uso de IA para generar clones de la clienta.</p>
+          <div class="tags"><span class="tag pink">Redes Sociales</span><span class="tag">Carruseles</span><span class="tag lime">Portadas de reels</span></div>
+        </div>
+      </article>
+      <article class="proj" data-project="mariadelluc" data-cursor="VER">
+        <div class="proj-thumb proj-thumb-img" style="--thumb:#e7e3da url('assets/projects/maria-de-lluc/portada.jpg') center/cover"></div>
+        <div class="proj-body">
+          <h4>María de Lluc</h4>
+          <div class="meta" data-i18n="proj-4-meta">2024 · ESPAÑA · FITNESS</div>
+          <p data-i18n="proj-4-desc">Identidad de marca y contenido para una dietista y su programa Empodérate Comiendo. Carruseles, reels y presentaciones que superaron 1M de visualizaciones.</p>
+          <div class="tags"><span class="tag pink">Redes Sociales</span><span class="tag">Empresa</span><span class="tag lime">Presentaciones</span><span class="tag">Logo</span></div>
+        </div>
+      </article>
+      <article class="proj" data-project="teresa" data-cursor="VER">
+        <div class="proj-thumb proj-thumb-img" style="--thumb:#f3f2ee url('assets/projects/teresa-terol/feed.jpg') left center/cover"></div>
+        <div class="proj-body">
+          <h4>Teresa Terol</h4>
+          <div class="meta" data-i18n="proj-teresa-meta">2024–2025 · ESPAÑA · PSICOLOGÍA</div>
+          <p data-i18n="proj-teresa-desc">Avatares animados creados con IA para la psicóloga y autora de <strong>Mente Umami</strong>. Personajes que ilustran situaciones y vuelven sus carruseles más atractivos.</p>
+          <div class="tags"><span class="tag pink">IA</span><span class="tag">Carruseles</span><span class="tag lime">Ilustración</span></div>
+        </div>
+      </article>
+      <article class="proj" data-project="alex" data-cursor="VER">
+        <div class="proj-thumb proj-thumb-img" style="--thumb:#1a1a1a url('assets/projects/alex-celada/feed.jpg') left center/cover"></div>
+        <div class="proj-body">
+          <h4>Alex Celada</h4>
+          <div class="meta" data-i18n="proj-alex-meta">2024–2025 · ESPAÑA · FITNESS</div>
+          <p data-i18n="proj-alex-desc">Portadas de reels y carruseles para el entrenador personal. Su contenido pasó de 1K a más de 100K visualizaciones, con piezas que llegaron a 144K.</p>
+          <div class="tags"><span class="tag pink">Redes Sociales</span><span class="tag">Carruseles</span><span class="tag lime">Portadas de reels</span></div>
+        </div>
+      </article>
+      <article class="proj" data-project="academia" data-cursor="VER">
+        <div class="proj-thumb proj-thumb-img" style="--thumb:#0a0a0a url('assets/projects/academia/academia-01.jpg') center/cover"></div>
+        <div class="proj-body">
+          <h4 data-i18n="proj-5-t">AcademIA Fixer</h4>
+          <div class="meta" data-i18n="proj-5-meta">2025 · ANDORRA · IA</div>
+          <p data-i18n="proj-5-desc">Identidad visual para la primera academia de habla hispana en optimización y automatización con IA. Estilo futurista para diferenciarla de la competencia internacional.</p>
+          <div class="tags"><span class="tag pink">IA</span><span class="tag lime">Manual de Marca</span></div>
+        </div>
+      </article>
+      <article class="proj" data-project="david" data-cursor="VER">
+        <div class="proj-thumb proj-thumb-img" style="--thumb:#1f4e9b url('assets/projects/david-gracia/feed.jpg') left center/cover"></div>
+        <div class="proj-body">
+          <h4>David Gracia</h4>
+          <div class="meta" data-i18n="proj-david-meta">2024–2025 · ESPAÑA · NUTRICIÓN</div>
+          <p data-i18n="proj-david-desc">Rebranding y gráfica completa para el nutricionista integral de mujeres y su programa Rompe Los Moldes, con +100 casos de éxito. Estáticos, carruseles y portadas de reel.</p>
+          <div class="tags"><span class="tag pink">Rebranding</span><span class="tag">Carruseles</span><span class="tag lime">Portadas de reel</span></div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04 · TESTIMONIOS ===== -->
+  <section class="block reveal" id="testim">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="eb-4">Testimonios</div>
+    </div>
+
+    <div class="logo-label" data-i18n="logos-label">— marcas y clientes que confiaron en mí —</div>
+    <div class="logo-marquee">
+      <div class="logo-track" id="logo-track">
+        <span class="logo-item brand" role="img" aria-label="Vocable" style="--logo:url('assets/logos/vocable.png');--ar:4.87;--h:26px"></span>
+        <span class="logo-item brand" role="img" aria-label="Outrank" style="--logo:url('assets/logos/outrank.png');--ar:4.07;--h:30px"></span>
+        <span class="logo-item brand" role="img" aria-label="Revid.ai" style="--logo:url('assets/logos/revid.png');--ar:4.31;--h:28px"></span>
+        <span class="logo-item brand" role="img" aria-label="AIApply" style="--logo:url('assets/logos/aiapply.png');--ar:3.33;--h:34px"></span>
+        <span class="logo-item brand" role="img" aria-label="AnswerThis" style="--logo:url('assets/logos/answerthis.png');--ar:9.35;--h:18px"></span>
+        <span class="logo-item brand" role="img" aria-label="Odin" style="--logo:url('assets/logos/odin.png');--ar:3.14;--h:30px"></span>
+        <span class="logo-item brand" role="img" aria-label="Block Media" style="--logo:url('assets/logos/blockmedia-color.png');--ar:2.72;--h:34px"></span>
+        <span class="logo-item brand" role="img" aria-label="RealEstateContent.ai" style="--logo:url('assets/logos/realstateai.png');--ar:5.94;--h:22px"></span>
+        <span class="logo-item brand" role="img" aria-label="Mr Pipeline" style="--logo:url('assets/logos/mrpipeline-color.png');--ar:2.77;--h:34px"></span>
+        <span class="logo-item brand" role="img" aria-label="EvolveRV" style="--logo:url('assets/logos/evolverv.png');--ar:4.96;--h:24px"></span>
+        <span class="logo-item brand" role="img" aria-label="Proin" style="--logo:url('assets/logos/proin.png');--ar:3.53;--h:30px"></span>
+        <span class="logo-item brand" role="img" aria-label="Blue Casas" style="--logo:url('assets/logos/bluecasas.png');--ar:0.92;--h:52px"></span>
+        <span class="logo-item brand" role="img" aria-label="María del Luc" style="--logo:url('assets/logos/mdl.png');--ar:1.9;--h:40px"></span>
+        <span class="logo-item brand" role="img" aria-label="Academia" style="--logo:url('assets/logos/academia.png');--ar:3.51;--h:30px"></span>
+      </div>
+    </div>
+
+    <div class="testim-grid">
+      <div class="testim">
+        <div class="q">“</div>
+        <p data-i18n="t1">El trabajo de María en nuestras plantillas fue simplemente increíble. Aporta un nivel de creatividad y profesionalismo de primera. Sus diseños no solo son visualmente impactantes, sino que se ajustan perfectamente a la identidad y las necesidades de nuestra marca. Estamos encantados con los resultados y la recomendamos para cualquiera que busque un trabajo de diseño excepcional.</p>
+<div class="testim-shots" aria-label="Trabajo realizado">
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/bluecasas-1.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/bluecasas-2.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/bluecasas-3.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="author"><div class="avatar" style="--bg:var(--lime)"><img src="assets/clients/bluecasas.png" alt="BlueCasas"></div><div class="who"><strong>BlueCasas</strong><span data-i18n="loc-us">Estados Unidos</span></div></div>
+      </div>
+      <div class="testim">
+        <div class="q">“</div>
+        <p data-i18n="t2">¡Increíble! Nos encanta trabajar con esta diseñadora. ¡La empresa que imprimió nuestros diseños comentó lo geniales que eran! Esperamos volver a trabajar con vos la próxima. ¡Muchas gracias!</p>
+<div class="testim-shots" aria-label="Trabajo realizado">
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/reddogs-1.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/reddogs-2.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/reddogs-3.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="author"><div class="avatar" style="--bg:var(--hot-pink);color:#fff"><img src="assets/clients/reddogs.png" alt="Red Dogs"></div><div class="who"><strong>Red Dogs Football Team</strong><span data-i18n="loc-au">Australia</span></div></div>
+      </div>
+      <div class="testim">
+        <div class="q">“</div>
+        <p data-i18n="t3">María superó las expectativas con el trabajo que necesitaba. Entendió lo que quería y lo devolvió en un proyecto que no solo se alineaba con mi marca, sino que además era creativo y entretenido a la vista. Sin duda la voy a recomendar y volveré a trabajar con ella.</p>
+        <div class="author"><div class="avatar" style="--bg:var(--orange);color:#fff"><img src="assets/clients/blockmedia.png" alt="Block Media"></div><div class="who"><strong>Block Media</strong><span data-i18n="loc-us">Estados Unidos</span></div></div>
+      </div>
+      <div class="testim">
+        <div class="q">“</div>
+        <p data-i18n="t4">¡Es genial cómo trabaja María, desde la comunicación con el cliente hasta el trabajo final! La rapidez y la calidad del trabajo son excelentes. ¡La recomiendo totalmente! Muchas gracias.</p>
+<div class="testim-shots" aria-label="Trabajo realizado">
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/ruslana-1.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/ruslana-2.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/ruslana-3.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="author"><div class="avatar" style="--bg:var(--pink-soft)"><img src="assets/clients/ruslana.png" alt="Ruslana"></div><div class="who"><strong>Ruslana</strong><span data-i18n="loc-be">Bélgica</span></div></div>
+      </div>
+      <div class="testim">
+        <div class="q">“</div>
+        <p data-i18n="t5">¡Hizo un trabajo increíble y muy rápido! El pedido quedó tal como lo esperaba y me encantaron las tipografías y los formatos que eligió para mis plantillas de Instagram. Entendió mi descripción a la perfección. ¡Estaría encantada de volver a trabajar con ella en próximos pedidos!</p>
+        <div class="author"><div class="avatar" style="--bg:var(--olive);color:#fff"><img src="assets/clients/bellamoda.png" alt="Bella Moda Styling"></div><div class="who"><strong>Bella Michela</strong><span data-i18n="loc-us">Estados Unidos</span></div></div>
+      </div>
+      <div class="testim">
+        <div class="q">“</div>
+        <p data-i18n="t6">Excelente trabajo como siempre. Da en el clavo cada vez. ¡Espero volver a trabajar con vos!</p>
+<div class="testim-shots" aria-label="Trabajo realizado">
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/robinson-1.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/robinson-2.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/robinson-3.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="author"><div class="avatar" style="--bg:var(--lime)"><img src="assets/clients/robinson.png" alt="R. L. Robinson III"></div><div class="who"><strong>R. L. Robinson III</strong><span data-i18n="loc-us">Estados Unidos</span></div></div>
+      </div>
+      <div class="testim">
+        <div class="q">“</div>
+        <p data-i18n="t7">Siempre es increíble hacer negocios con María. La recomiendo muchísimo.</p>
+<div class="testim-shots" aria-label="Trabajo realizado">
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/evolverv-1.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/evolverv-2.jpg" alt="" loading="lazy"></div>
+          <div class="tshot" data-cursor="AMPLIAR"><img src="assets/clients/work/evolverv-3.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="author"><div class="avatar" style="--bg:var(--hot-pink);color:#fff"><img src="assets/clients/evolverv.png" alt="EvolveRV"></div><div class="who"><strong>EvolveRV</strong><span data-i18n="loc-au">Australia</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 05 · HABLEMOS ===== -->
+  <section class="block reveal" id="contact">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="eb-5">Hablemos</div>
+    </div>
+
+    <p class="contact-intro" data-i18n="s5-intro">¿Tenés un proyecto? ¿Querés trabajar conmigo? ¿O simplemente decirme hola? Estoy disponible acá:</p>
+
+    <div class="contact-grid">
+      <a class="contact" href="mailto:constanzamasi02@gmail.com" data-cursor="EMAIL">
+        <span class="c-ico"><svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 5.3L19.8 6H4.2ZM20 7.7l-7.4 5a1 1 0 0 1-1.2 0L4 7.7V18.5c0 .3.2.5.5.5h15a.5.5 0 0 0 .5-.5V7.7Z"/></svg></span>
+        <span class="c-lbl">Email</span>
+        <span class="c-val">constanzamasi02@gmail.com</span>
+      </a>
+      <a class="contact" href="https://wa.me/5492613824773" target="_blank" rel="noopener" data-cursor="WHATSAPP">
+        <span class="c-ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.8.9.9-2.7-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2a.4.4 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.7 2.7 4.2 3.7 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.5-.3Z"/></svg></span>
+        <span class="c-lbl">WhatsApp</span>
+        <span class="c-val">+54 9 261 382 4773</span>
+      </a>
+      <a class="contact" href="https://www.instagram.com/mconstanzamasi/" target="_blank" rel="noopener" data-cursor="SEGUIR">
+        <span class="c-ico"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.92 5.92 0 0 0-2.13 1.39A5.92 5.92 0 0 0 .62 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.32.79.74 1.46 1.39 2.13a5.92 5.92 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.92 5.92 0 0 0 2.13-1.39 5.92 5.92 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.92 5.92 0 0 0-1.39-2.13A5.92 5.92 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></span>
+        <span class="c-lbl">Instagram</span>
+        <span class="c-val">@mconstanzamasi</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== MODAL ===== -->
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-bar">
+      <div class="mt">▣ <span id="m-file">project.html</span></div>
+      <button class="modal-x" id="m-close" data-cursor="CERRAR" aria-label="Cerrar">×</button>
+    </div>
+    <div class="modal-grid">
+      <div class="modal-l">
+        <div class="ph" id="m-client"></div>
+        <h2 id="m-name"></h2>
+        <h3 data-i18n="m-overview">Overview</h3>
+        <p id="m-desc">Fui la primera diseñadora gráfica en incorporarme al equipo, estableciendo los criterios visuales para anuncios de empresas desarrolladoras de inteligencia artificial. Diseñé piezas publicitarias alineadas con la identidad de cada marca, logrando campañas con alto alcance y viralización que impulsaron el crecimiento de suscripciones. Complementé el proceso creativo mediante el uso de Gemini y ChatGPT para desarrollar personajes animados y activos visuales adaptados a los perfiles de cliente de cada empresa.</p>
+        <h3 data-i18n="m-deliv">Entregables</h3>
+        <ul class="deliv" id="m-list"></ul>
+      </div>
+      <div class="modal-r">
+        <div class="shot-grid" id="m-shots">
+          <div class="shot"><span data-i18n="shot-1">imagen 1 — reemplazar</span></div>
+          <div class="shot"><span data-i18n="shot-2">imagen 2 — reemplazar</span></div>
+          <div class="shot"><span data-i18n="shot-3">imagen 3 — reemplazar</span></div>
+          <div class="shot"><span data-i18n="shot-4">imagen 4 — reemplazar</span></div>
+          <div class="shot"><span data-i18n="shot-5">imagen 5 — reemplazar</span></div>
+          <div class="shot"><span data-i18n="shot-6">imagen 6 — reemplazar</span></div>
+        </div>
+        <p class="carousel-hint" data-i18n="m-hint">cuadrícula estática · reemplazá con tus capturas</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LIGHTBOX (imágenes a tamaño completo) ===== -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-x" id="lb-x" aria-label="Cerrar" data-cursor="CERRAR">×</button>
+  <button class="lb-nav lb-prev" id="lb-prev" aria-label="Anterior" data-cursor="ANT">‹</button>
+  <img class="lb-img" id="lb-img" alt="">
+  <video class="lb-img lb-video" id="lb-video" playsinline controls preload="metadata" style="display:none"></video>
+  <button class="lb-nav lb-next" id="lb-next" aria-label="Siguiente" data-cursor="SIG">›</button>
+  <div class="lb-count" id="lb-count"></div>
+  <div class="lb-strip" id="lb-strip"></div>
+</div>
+
+<!-- ===== VIDEO LIGHTBOX (reels 9:16) ===== -->
+<div class="vlb" id="vlb" aria-hidden="true">
+  <button class="vlb-x" id="vlb-x" data-cursor="CERRAR" aria-label="Cerrar">×</button>
+  <video class="vlb-video" id="vlb-video" playsinline controls preload="metadata"></video>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-name" style="color: rgb(254, 247, 235)">MARÍA CONSTANZA
+MASI PINO</div>
+      <a class="foot-email" href="mailto:constanzamasi02@gmail.com" data-cursor="EMAIL">constanzamasi02@gmail.com</a>
+    </div>
+    <p class="foot-tag" data-i18n="foot-tag">Diseñemos algo que merezca
+ser recordado
+</p>
+    <div class="foot-social">
+      <a href="https://www.instagram.com/mconstanzamasi/" target="_blank" rel="noopener" aria-label="Instagram" data-cursor="IG">
+        <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.92 5.92 0 0 0-2.13 1.39A5.92 5.92 0 0 0 .62 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.32.79.74 1.46 1.39 2.13a5.92 5.92 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.92 5.92 0 0 0 2.13-1.39 5.92 5.92 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.92 5.92 0 0 0-1.39-2.13A5.92 5.92 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/mconstanzamasi" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor="IN">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 .01-4.13 2.06 2.06 0 0 1-.01 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="mailto:constanzamasi02@gmail.com" aria-label="Email" data-cursor="EMAIL">
+        <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 5.3L19.8 6H4.2ZM20 7.7l-7.4 5a1 1 0 0 1-1.2 0L4 7.7V18.5c0 .3.2.5.5.5h15a.5.5 0 0 0 .5-.5V7.7Z"/></svg>
+      </a>
+    </div>
+    <div class="foot-bottom">
+      <p class="copyright" data-i18n="foot-copy">© 2026 María Constanza Masi Pino — Todos los derechos reservados</p>
+      <a class="foot-back" href="#top" data-cursor="ARRIBA" data-i18n="foot-back">↑ volver arriba</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+
+<!-- Tweaks island (React) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks.jsx"></script>
+
+</body>
+</html>

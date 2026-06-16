@@ -1,0 +1,20 @@
+CARPETA DE FOTOS DE PERFIL (TESTIMONIOS)
+========================================
+
+Dejá acá las fotos de perfil de las personas / marcas que dejaron testimonios.
+Hoy se muestran con iniciales (BC, RD, BK, R, BM, RR, RV); cuando subas las
+fotos las reemplazo por la imagen real en el círculo del avatar.
+
+Sugerencia de nombres (uno por testimonio):
+
+  fotos-perfiles/
+    bluecasas.jpg
+    reddogs.jpg
+    blockmedia.jpg
+    ruslana.jpg
+    bellamichela.jpg
+    robinson.jpg
+    evolverv.jpg
+
+Formato recomendado: JPG o PNG cuadrado (1:1), mínimo 200x200 px.
+Cuando las subas, avisame y las conecto a cada avatar.

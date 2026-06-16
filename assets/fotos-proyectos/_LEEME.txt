@@ -1,0 +1,16 @@
+CARPETA DE FOTOS DE PROYECTOS
+=============================
+
+Dejá acá las imágenes de cada proyecto (las que aparecen en la cuadrícula
+estática cuando se abre el detalle de un proyecto).
+
+Sugerencia de organización — una subcarpeta por proyecto:
+
+  fotos-proyectos/
+    viralclip/    -> 1.jpg, 2.jpg, 3.jpg ...
+    laofitcina/   -> 1.jpg, 2.jpg, 3.jpg ...
+    miami/        -> 1.jpg, 2.jpg, 3.jpg ...
+    freelance/    -> 1.jpg, 2.jpg, 3.jpg ...
+
+Formato recomendado: JPG o PNG, proporción 4:3, mínimo 800x600 px.
+Cuando las subas, avisame y las conecto a la cuadrícula del modal de cada proyecto.
