@@ -464,7 +464,7 @@ section.block{
 .about-text p strong{ color:var(--ink); font-weight:700; }
 .about-text .lead{ font-size:18px; color:var(--ink); }
 .about-text .lead strong{ color:var(--accent); }
-.about-card{ position:sticky; top:90px; text-align:center; }
+.about-card{ position:sticky; top:90px; text-align:left; }
 .portrait{
   width:330px; max-width:100%; margin:0 auto;
 }
