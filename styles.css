@@ -728,7 +728,7 @@ section.block{
   -webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
   mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
   scrollbar-width:none; -ms-overflow-style:none;
-  cursor:grab; user-select:none; touch-action:pan-y;
+  cursor:grab; user-select:none; touch-action:none;
 }
 .proj-carousel::-webkit-scrollbar{ display:none; }
 .proj-carousel.dragging{ cursor:grabbing; }
